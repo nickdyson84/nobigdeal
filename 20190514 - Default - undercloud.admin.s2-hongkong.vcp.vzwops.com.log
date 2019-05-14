@@ -1,0 +1,221 @@
+﻿Last login: Mon May 13 17:01:14 2019 from 10.194.243.30
+[dysonni@undercloud.. ~]$ sudo su - vcp
+[sudo] password for dysonni: 
+Last login: Mon May 13 16:56:44 UTC 2019 on pts/0
+[vcp@undercloud.. ~]$ source overcloud-s2-hongkongrc.v3
+env |grep OS_CLOUDNAME
+[vcp@undercloud.. ~]$ env |grep OS_CLOUDNAME
+OS_CLOUDNAME=overcloud-s2-hongkong
+[vcp@undercloud.. ~]$ sudo su - stack
+Last login: Mon May 13 22:37:14 UTC 2019 on pts/0
+[stack@undercloud.. ~]$ cd scripts
+[stack@undercloud.. scripts]$ ls
+ceilometer_check.sh  ceilometer_fix3.sh  conf_backup.sh  fix_ironic_node_attr.sh  list_node_ip.sh
+ceilometer_fix2.sh   ceilometer_fix.sh   cstate_update   Host_Agg                 stack_checkv3.sh
+[stack@undercloud.. scripts]$ ./stack_checkv3.sh
+Stack Check version v20190409.15 on: Tue May 14 20:42:25 UTC 2019
+Failure output only (y/n): y
+Remove old stack_check log files (y/n): n
+Stack validation and process check
+==================================
+1. Controller Configuration
+2. Controller Services
+3. Compute
+4. Host Aggregates
+5. Undercloud
+6. Openstack
+7. Version checks
+A. All tests
+Selection: A
+======================================================================================
+controller0
+===Starting configuration check
+---Horizon upload temp location
+---HORIZON_IMAGES_UPLOAD_MODE (OSP10+)
+---Horizon IMAGE_ALLOW_LOCATION (OSP10+)
+---KB 36495 - Horizon dashboard httpd configuration
+---Chrony process
+---KB 10344 - keystone token flush cron setting
+---KB 12237 - ceilometer ignore projects
+---Checking ceilometer time to live settings
+---Checking Ceilometer/Gnocchi parameters
+---Checking metric archive policy
+---KB 23031 - MySQL Max Conn setting
+---KB 34728 - memcached setting
+---KB 11589 - swift rings - file checksums
+---KB 11589 - swift rings - IP addresses
+---KB 23039 - filesystem defined sizes
+---fstab entries for lvm filesystems
+---KB 11591 - sshd config fix
+---KB 35586 - CSP/DCS new Agent Version 672
+---Time server configuration
+---KB 44909 - Cinder VNX configuration -- destroy_empty_storage_group
+---KB 44909 - Cinder VNX configuration -- initator_auto_deregistration
+---KB 44909 - Cinder VNX configuration -- client.py hotfix
+---KB 44909 - Cinder VNX configuration -- adapter.py hotfix
+---KB 45203 - Fix notification_format for nova
+===End of configuration check controller0
+======================================================================================
+controller1
+===Starting configuration check
+---Horizon upload temp location
+---HORIZON_IMAGES_UPLOAD_MODE (OSP10+)
+---Horizon IMAGE_ALLOW_LOCATION (OSP10+)
+---KB 36495 - Horizon dashboard httpd configuration
+---Chrony process
+---KB 10344 - keystone token flush cron setting
+---KB 12237 - ceilometer ignore projects
+---Checking ceilometer time to live settings
+---Checking Ceilometer/Gnocchi parameters
+---Checking metric archive policy
+---KB 23031 - MySQL Max Conn setting
+---KB 34728 - memcached setting
+---KB 11589 - swift rings - file checksums
+---KB 11589 - swift rings - IP addresses
+---KB 23039 - filesystem defined sizes
+---fstab entries for lvm filesystems
+---KB 11591 - sshd config fix
+---KB 35586 - CSP/DCS new Agent Version 672
+---Time server configuration
+---KB 44909 - Cinder VNX configuration -- destroy_empty_storage_group
+---KB 44909 - Cinder VNX configuration -- initator_auto_deregistration
+---KB 44909 - Cinder VNX configuration -- client.py hotfix
+---KB 44909 - Cinder VNX configuration -- adapter.py hotfix
+---KB 45203 - Fix notification_format for nova
+===End of configuration check controller1
+======================================================================================
+controller2
+===Starting configuration check
+---Horizon upload temp location
+---HORIZON_IMAGES_UPLOAD_MODE (OSP10+)
+---Horizon IMAGE_ALLOW_LOCATION (OSP10+)
+---KB 36495 - Horizon dashboard httpd configuration
+---Chrony process
+---KB 10344 - keystone token flush cron setting
+---KB 12237 - ceilometer ignore projects
+---Checking ceilometer time to live settings
+---Checking Ceilometer/Gnocchi parameters
+---Checking metric archive policy
+---KB 23031 - MySQL Max Conn setting
+---KB 34728 - memcached setting
+---KB 11589 - swift rings - file checksums
+---KB 11589 - swift rings - IP addresses
+---KB 23039 - filesystem defined sizes
+---fstab entries for lvm filesystems
+---KB 11591 - sshd config fix
+---KB 35586 - CSP/DCS new Agent Version 672
+---Time server configuration
+---KB 44909 - Cinder VNX configuration -- destroy_empty_storage_group
+---KB 44909 - Cinder VNX configuration -- initator_auto_deregistration
+---KB 44909 - Cinder VNX configuration -- client.py hotfix
+---KB 44909 - Cinder VNX configuration -- adapter.py hotfix
+---KB 45203 - Fix notification_format for nova
+===End of configuration check controller2
+===Starting system state check controller0
+---Number of httpd processes
+---MySQL process count
+---MySQL connections
+---MySQL cluster status
+---Checking openstack systemctl services
+---Checking neutron systemctl services
+---Checking mongo systemctl services
+---Checking httpd systemctl services
+---pcs status
+---pcs rabbitmq-clone
+---rabbitmqctl cluster_status
+---em1/2 light levels, bond1 and MTU
+---Checking for failed systemctl services
+---Checking Global physnet mtu
+===End system state check controller0
+===Starting system state check controller1
+---Number of httpd processes
+---MySQL process count
+---MySQL connections
+---MySQL cluster status
+---Checking openstack systemctl services
+---Checking neutron systemctl services
+---Checking mongo systemctl services
+---Checking httpd systemctl services
+---pcs status
+---pcs rabbitmq-clone
+---rabbitmqctl cluster_status
+---em1/2 light levels, bond1 and MTU
+---Checking for failed systemctl services
+---Checking Global physnet mtu
+===End system state check controller1
+===Starting system state check controller2
+---Number of httpd processes
+---MySQL process count
+---MySQL connections
+---MySQL cluster status
+---Checking openstack systemctl services
+---Checking neutron systemctl services
+---Checking mongo systemctl services
+---Checking httpd systemctl services
+---pcs status
+---pcs rabbitmq-clone
+---rabbitmqctl cluster_status
+---em1/2 light levels, bond1 and MTU
+---Checking for failed systemctl services
+---Checking Global physnet mtu
+===End system state check controller2
+======================================================================================
+===Starting compute tests
+---Compute node ssh access, volume group, em1/2-storage-tenant light levels, bond1, libvirtd and resume_on_boot
+Test will take a few minutes...
+Checking: compute0
+Checking: compute1
+Checking: compute2
+Checking: compute3
+Checking: compute4
+Checking: compute5
+---Compute MTU (Testing on one compute)
+Lite site - global_physnet_mtu only; other MTU tests TBD
+===End compute tests
+======================================================================================
+===Starting aggregate tests
+---cpu pinning/hugepages
+=== nova.conf: cpu_allocation_ratio (1.0):vcpu_pin_set (see next line):reserved_host_memory_mb (10240)
+=== vcpu_pin_set - 48 cpu -> 2-23,26-47 / 56 cpu -> 2-27,30-55
+---verify no cpu pinning/hugepages on non-pinned aggregates
+=== nova.conf: cpu_allocation_ratio (3.0):vcpu_pin_set (no value):reserved_host_memory_mb (2048)
+===End aggregate tests
+======================================================================================
+===Starting undercloud tests
+---KB 6395 - ceilometer time to live settings
+===End undercloud tests
+======================================================================================
+===Starting openstack tests
+---Nova compute services
+---Neutron services
+---Cinder services
+---Glance image file count
+---RBAC wildcard records
+---Nodes in maintenance mode
+===End openstack tests
+======================================================================================
+===Starting version tests
+---Compute, controller, undercloud operating system versions
+===End version tests
+Log file by controller created in /tmp/stackval_s2-hongkong_ctlr-2019-05-14_20:42:25.log
+Log file by test created in /tmp/stackval_s2-hongkong_cfg_svc-2019-05-14_20:42:25.log
+[stack@undercloud.. scripts]$ openstack project show admin
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | admin tenant                     |
+| enabled     | True                             |
+| id          | 784f3f61f7e5422492115adeb7b201af |
+| name        | admin                            |
+| properties  |                                  |
++-------------+----------------------------------+
+[stack@undercloud.. scripts]$ openstack project list
++----------------------------------+---------+
+| ID                               | Name    |
++----------------------------------+---------+
+| 784f3f61f7e5422492115adeb7b201af | admin   |
+| 045e9ea97b564e49911d6077c23af970 | service |
++----------------------------------+---------+
+[stack@undercloud.. scripts]$ timed out waiting for input: auto-logout
+[vcp@undercloud.. ~]$ timed out waiting for input: auto-logout
+[dysonni@undercloud.. ~]$ timed out waiting for input: auto-logout
